@@ -1,0 +1,26 @@
+.comments_length {
+  margin-bottom: 12px;
+}
+
+.comment_form .comment_input {
+  box-sizing: border-box;
+  display: inline-block;
+  border: 1px solid #dce8e0;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  padding: 16px 16px 24px;
+  margin-bottom: 12px;
+}
+
+.comment_submitBtn {
+  width: 120px;
+  padding: 6px 12px;
+  border: 1px solid #d0d6d2;
+  border-radius: 8px;
+  background-color: #86dfc3;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}

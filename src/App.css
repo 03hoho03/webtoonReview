@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.body {
+  background-color: #F8F9FA;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+input {
+  all: unset;
+}
+
+textarea {
+  all:unset;
+}

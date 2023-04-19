@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 50px;
+  padding: 32px 0px;
+  word-wrap: break-word;
+}
+
+.board_detail {
+  margin-bottom: 24px;
+}
+
+.name::after {
+  content:'·';
+  color: black;
+  padding: 0px 4px;
+}
+
+.date {
+  margin-right: 18px;
+}
+
+.context {
+  margin-bottom: 24px;
+}
+
+.update_btns {
+  display: inline;
+}
+.update_btns button {
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
+  padding: 0;
+}
+
+.image {
+  display: block;
+  width: 100%;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  margin: 0 4px;
+}
+.icon:hover {
+  color: red;
+}

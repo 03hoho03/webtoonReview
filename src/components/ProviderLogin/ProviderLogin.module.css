@@ -1,0 +1,8 @@
+.provider_btn {
+  width: 320px;
+  margin: 10px;
+  padding: 10px;
+  border: solid black 1px;
+  border-radius: 100px;
+  cursor: pointer;
+}

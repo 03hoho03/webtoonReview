@@ -1,0 +1,87 @@
+.comment {
+  width: 100%;
+  padding: 24px 0px;
+  border-bottom: 1px solid #F1F3F5;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.profile {
+  display: flex;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+
+.class_info {
+  margin-left: 8px;
+}
+
+.class_info .comment_creator {
+  font-weight: 700;
+}
+
+.class_info .comment_createdAt {
+  font-size: 14px;
+  color: #868E96;
+}
+
+.edit_input {
+  width: 100%;
+  padding: 18px;
+  font-size: 18px;
+}
+
+.comment_update_btns span {
+  font-size: 14px;
+  cursor: pointer;
+  color: #868E96;
+}
+.comment_update_btns span:hover {
+  text-decoration: underline;
+}
+
+.modify {
+  margin-right: 8px;
+}
+
+p {
+  font-size: 18px;
+  padding: 18px 0;
+}
+
+.update_submit_btns {
+  text-align: right;
+}
+
+.update_submit_btns button {
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+}
+
+.update_submit_btns .cancel_btn {
+  color: #86dfc3;
+  background-color: inherit;
+}
+
+.update_submit_btns .cancel_btn:hover {
+  background-color: #eaeeee;
+}
+
+.update_submit_btns .edit_btn {
+  background-color: #86dfc3;
+  color: white;
+  margin-left: 8px;
+}
+
+.update_submit_btns .edit_btn:hover {
+  background-color: #6dcaad;
+}

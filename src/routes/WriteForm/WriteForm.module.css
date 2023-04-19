@@ -1,0 +1,25 @@
+.edit_form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+textarea {
+  height: fit-content;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.title {
+  width: 100%;
+  font-size: 44px;
+  font-weight: 700;
+  font-family: 'Noto Sans KR', sans-serif;
+  height: 66px;
+  padding: 20px 0;
+}
+
+.context {
+  font-size: 18px;
+}

@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+}
+
+.input_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid #e6e1de;
+  width: 300px;
+}
+
+.input :last-child {
+  margin-bottom: 12px;
+}
+
+.error_div {
+  text-align: right;
+  font-size: 14px;
+  color: rgb(212, 3, 3);
+}
+
+.submit_btn {
+  padding: 10px;
+  margin-top: 15px;
+  background-color: green;
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+.submit_btn:hover {
+  opacity: 0.8;
+}
+
+.make_account {
+  font-size: 13px;
+  margin-top: 10px;
+}
