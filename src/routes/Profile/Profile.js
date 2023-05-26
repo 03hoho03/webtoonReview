@@ -3,8 +3,9 @@ import styles from "./Profile.module.css";
 import { collection, onSnapshot, query, where } from "firebase/firestore";
 import { dbService } from "../../fbase";
 import { useNavigate } from "react-router-dom";
+import Navigator from "../../components/Navigator/Navigator";
 
-const Profile = ({ userObj }) => {
+const Profile = ({ userObj, isLoggedIn }) => {
   const [userContext, setUserContext] = useState([]);
 
   const navigate = useNavigate();
@@ -40,6 +41,7 @@ const Profile = ({ userObj }) => {
   console.log(userContext);
   return (
     <>
+      <Navigator isLoggedIn={isLoggedIn} userObj={userObj} />
       {userObj ? (
         <div className={styles.userProfile}>
           <img src={userObj.profile_photo} />

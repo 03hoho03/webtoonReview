@@ -8,8 +8,9 @@ import { dbService, storageService } from "../../fbase";
 import { ref, deleteObject } from "firebase/storage";
 import CommentForm from "../../components/CommentForm/CommentForm";
 import CommentList from "../../components/CommentList/CommentList";
+import Navigator from "../../components/Navigator/Navigator";
 
-const Board = ({ userObj }) => {
+const Board = ({ userObj, isLoggedIn }) => {
   const location = useLocation();
   const navigate = useNavigate();
   console.log(location);
@@ -49,43 +50,46 @@ const Board = ({ userObj }) => {
 
   console.log(userObj);
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>{context.title}</h1>
-      <div className={styles.board_detail}>
-        <span className={styles.name}>
-          <strong>{context.creatorName}</strong>
-        </span>
-        <span className={styles.date}>{`${year}년 ${month}월 ${day}일`}</span>
-        {userObj && userObj.uid === context.creatorId ? (
-          <div className={styles.update_btns}>
-            <button name="delete_btn" onClick={onClickUpdateBtn}>
-              <FontAwesomeIcon
-                name="delete_btn"
-                icon={faTrash}
-                className={styles.icon}
-              />
-            </button>
-            <button name="edit_btn" onClick={onClickUpdateBtn}>
-              <FontAwesomeIcon
-                name="edit_btn"
-                icon={faWrench}
-                className={styles.icon}
-              />
-            </button>
-          </div>
+    <>
+      <Navigator userObj={userObj} isLoggedIn={isLoggedIn} />
+      <div className={styles.container}>
+        <h1 className={styles.title}>{context.title}</h1>
+        <div className={styles.board_detail}>
+          <span className={styles.name}>
+            <strong>{context.creatorName}</strong>
+          </span>
+          <span className={styles.date}>{`${year}년 ${month}월 ${day}일`}</span>
+          {userObj && userObj.uid === context.creatorId ? (
+            <div className={styles.update_btns}>
+              <button name="delete_btn" onClick={onClickUpdateBtn}>
+                <FontAwesomeIcon
+                  name="delete_btn"
+                  icon={faTrash}
+                  className={styles.icon}
+                />
+              </button>
+              <button name="edit_btn" onClick={onClickUpdateBtn}>
+                <FontAwesomeIcon
+                  name="edit_btn"
+                  icon={faWrench}
+                  className={styles.icon}
+                />
+              </button>
+            </div>
+          ) : (
+            <></>
+          )}
+        </div>
+        {context.imageURL !== "" ? (
+          <img className={styles.image} src={context.imageURL} />
         ) : (
           <></>
         )}
+        <p className={styles.context}>{context.text}</p>
+        <h5>좋아요 개수:{context.like}</h5>
+        <CommentList contextId={context.id} userObj={userObj} />
       </div>
-      {context.imageURL !== "" ? (
-        <img className={styles.image} src={context.imageURL} />
-      ) : (
-        <></>
-      )}
-      <p className={styles.context}>{context.text}</p>
-      <h5>좋아요 개수:{context.like}</h5>
-      <CommentList contextId={context.id} userObj={userObj} />
-    </div>
+    </>
   );
 };
 

@@ -38,9 +38,15 @@ const AppRoute = () => {
           <Route path="/login" element={<LoginRoute />} />
           <Route path="/login/admit" element={<CreateAccount />} />
           <Route path="/write" element={<WriteForm userObj={userObj} />} />
-          <Route path="/board/*" element={<Board userObj={userObj} />} />
+          <Route
+            path="/board/*"
+            element={<Board userObj={userObj} isLoggedIn={isLoggedIn} />}
+          />
           <Route path="/edit/*" element={<EditForm />} />
-          <Route path="/profile/*" element={<Profile userObj={userObj} />} />
+          <Route
+            path="/profile/*"
+            element={<Profile userObj={userObj} isLoggedIn={isLoggedIn} />}
+          />
         </Routes>
       </Router>
     </>

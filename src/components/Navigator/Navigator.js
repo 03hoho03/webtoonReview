@@ -16,7 +16,9 @@ const Navigator = ({ isLoggedIn, userObj }) => {
   };
   return (
     <div className={styles.container}>
-      <Link to="/">webtoon</Link>
+      <Link to="/">
+        <span className={styles.logo}>리뷰툰</span>
+      </Link>
       {isLoggedIn ? (
         <div>
           <button className={styles.nav_btn} onClick={onClickWriteBtn}>
@@ -30,7 +32,9 @@ const Navigator = ({ isLoggedIn, userObj }) => {
           </button>
         </div>
       ) : (
-        <Link to="/login">Login</Link>
+        <Link to="/login">
+          <button className={styles.nav_btn}>Login</button>
+        </Link>
       )}
     </div>
   );

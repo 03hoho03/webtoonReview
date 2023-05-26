@@ -10,7 +10,7 @@ const Home = ({ isLoggedIn, userObj }) => {
       <Navigator isLoggedIn={isLoggedIn} userObj={userObj} />
       <div className={styles.container}>
         <BoardList userObj={userObj} />
-        <SideBar />
+        {/* <SideBar /> */}
       </div>
     </div>
   );

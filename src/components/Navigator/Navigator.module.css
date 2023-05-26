@@ -8,6 +8,16 @@
   padding: 32px 24px;
 }
 
+.logo {
+  font-size: 40px;
+  font-weight: 700;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
 .nav_btn {
   border: none;
   margin-right: 12px;
