@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/webtoonReview/static/css/main.50bb0fb2.css",
+    "main.js": "/webtoonReview/static/js/main.e3ff92e5.js",
+    "index.html": "/webtoonReview/index.html",
+    "main.50bb0fb2.css.map": "/webtoonReview/static/css/main.50bb0fb2.css.map",
+    "main.e3ff92e5.js.map": "/webtoonReview/static/js/main.e3ff92e5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.50bb0fb2.css",
+    "static/js/main.e3ff92e5.js"
+  ]
+}
